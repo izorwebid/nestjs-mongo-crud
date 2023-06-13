@@ -9,13 +9,13 @@ import {
   Put,
   Res,
 } from '@nestjs/common';
-import { StudentService } from './student.service';
-import { CreateStudentDto } from 'src/dto/create-student.dto';
-import { UpdateStudentDto } from 'src/dto/update-student.dto';
+import { StudentsService } from './students.service';
+import { CreateStudentDto } from 'src/students/dto/create-student.dto';
+import { UpdateStudentDto } from 'src/students/dto/update-student.dto';
 
 @Controller('student')
-export class StudentController {
-  constructor(private readonly studentService: StudentService) {}
+export class StudentsController {
+  constructor(private readonly studentService: StudentsService) {}
 
   @Get()
   async getAll(@Res() response) {
